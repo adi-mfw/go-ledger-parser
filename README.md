@@ -21,6 +21,12 @@ I/O Operations: Using the os, io, and encoding/json packages.
 
 Error Handling: Consistent and idiomatic use of if err != nil.
 
+## 📦 Installation
+
+**Want to use the pre-built binary?** See the [Installation Guide](INSTALLATION.md) for detailed instructions on downloading and using the binary from GitHub Releases.
+
+**Want to build from source?** Continue reading below.
+
 ## 🚀 How to Run
 
 ### Prerequisites
