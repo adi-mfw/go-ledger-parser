@@ -30,7 +30,7 @@ Error Handling: Consistent and idiomatic use of if err != nil.
 
 1. **Run directly with `go run`:**
    ```bash
-   go run main.go sample_input.json output.json
+   go run main.go --input sample_input.json --output output.json
    ```
 
 2. **Or build and run:**
@@ -39,17 +39,27 @@ Error Handling: Consistent and idiomatic use of if err != nil.
    go build -o ledger-parser main.go
    
    # Run the executable
-   ./ledger-parser sample_input.json output.json
+   ./ledger-parser --input sample_input.json --output output.json
    ```
 
 ### Usage
 ```bash
-./ledger-parser <input_json_file> <output_json_file>
+./ledger-parser --input <input_json_file> --output <output_json_file>
+```
+
+You can also use short flags:
+```bash
+./ledger-parser -i <input_json_file> -o <output_json_file>
 ```
 
 ### Example
 ```bash
-go run main.go sample_input.json report.json
+go run main.go --input sample_input.json --output report.json
+```
+
+Or with short flags:
+```bash
+go run main.go -i sample_input.json -o report.json
 ```
 
 This will:
