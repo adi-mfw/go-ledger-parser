@@ -20,3 +20,57 @@ Data Modeling: Structs, Methods, and a simple Interface for abstraction.
 I/O Operations: Using the os, io, and encoding/json packages.
 
 Error Handling: Consistent and idiomatic use of if err != nil.
+
+## 🚀 How to Run
+
+### Prerequisites
+- Go 1.16 or later installed
+
+### Quick Start
+
+1. **Run directly with `go run`:**
+   ```bash
+   go run main.go sample_input.json output.json
+   ```
+
+2. **Or build and run:**
+   ```bash
+   # Build the executable
+   go build -o ledger-parser main.go
+   
+   # Run the executable
+   ./ledger-parser sample_input.json output.json
+   ```
+
+### Usage
+```bash
+./ledger-parser <input_json_file> <output_json_file>
+```
+
+### Example
+```bash
+go run main.go sample_input.json report.json
+```
+
+This will:
+- Read transactions from `sample_input.json`
+- Validate each transaction (amount > 0, valid date format)
+- Print validation errors for invalid transactions
+- Generate an aggregated report by user
+- Write the report to `report.json`
+
+### Sample Input Format
+See `sample_input.json` for an example. Each transaction should have:
+- `id`: Transaction identifier
+- `type`: "CREDIT" or "DEBIT"
+- `amount`: Positive number
+- `date`: Date in "YYYY-MM-DD" format
+- `user_id`: User identifier
+
+### Output Format
+The output JSON contains aggregated data per user:
+- `user_id`: User identifier
+- `total_credit`: Sum of all valid credit transactions
+- `total_debit`: Sum of all valid debit transactions
+- `valid_count`: Number of valid transactions
+- `invalid_count`: Number of invalid transactions
