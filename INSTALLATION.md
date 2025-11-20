@@ -17,14 +17,12 @@ This guide explains how to download, install, and use the pre-built binary of `g
 ### Option 2: Using wget or curl
 
 ```bash
-# macOS Apple Silicon (replace YOUR_USERNAME with your GitHub username)
-wget https://github.com/YOUR_USERNAME/go-ledger-parser/releases/download/v1.0.0/ledger-parser-darwin-arm64
+# macOS Apple Silicon
+wget https://github.com/adi-mfw/go-ledger-parser/releases/download/v1.0.0/ledger-parser-darwin-arm64
 
 # Or with curl
-curl -L -o ledger-parser-darwin-arm64 https://github.com/YOUR_USERNAME/go-ledger-parser/releases/download/v1.0.0/ledger-parser-darwin-arm64
+curl -L -o ledger-parser-darwin-arm64 https://github.com/adi-mfw/go-ledger-parser/releases/download/v1.0.0/ledger-parser-darwin-arm64
 ```
-
-**Note:** Replace `YOUR_USERNAME` with the actual GitHub username or organization name.
 
 ---
 
